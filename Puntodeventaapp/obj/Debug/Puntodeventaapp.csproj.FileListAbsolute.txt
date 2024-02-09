@@ -1,0 +1,9 @@
+C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Puntodeventaapp\bin\Debug\Puntodeventaapp.exe.config
+C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Puntodeventaapp\bin\Debug\Puntodeventaapp.exe
+C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Puntodeventaapp\bin\Debug\Puntodeventaapp.pdb
+C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Puntodeventaapp\obj\Debug\Puntodeventaapp.csproj.AssemblyReference.cache
+C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Puntodeventaapp\obj\Debug\Puntodeventaapp.Properties.Resources.resources
+C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Puntodeventaapp\obj\Debug\Puntodeventaapp.csproj.GenerateResource.cache
+C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Puntodeventaapp\obj\Debug\Puntodeventaapp.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Puntodeventaapp\obj\Debug\Puntodeventaapp.exe
+C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Puntodeventaapp\obj\Debug\Puntodeventaapp.pdb
