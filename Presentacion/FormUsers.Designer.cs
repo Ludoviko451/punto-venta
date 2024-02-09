@@ -38,13 +38,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txt_identityCard = new System.Windows.Forms.TextBox();
+            this.txt_name = new System.Windows.Forms.TextBox();
+            this.txt_lastName = new System.Windows.Forms.TextBox();
+            this.txt_phoneNumber = new System.Windows.Forms.TextBox();
+            this.txt_user = new System.Windows.Forms.TextBox();
+            this.txt_password = new System.Windows.Forms.TextBox();
             this.btn_close = new System.Windows.Forms.Button();
+            this.txt_userId = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btn_showUsers = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -140,47 +143,47 @@
             this.label6.TabIndex = 9;
             this.label6.Text = "Password:";
             // 
-            // textBox1
+            // txt_identityCard
             // 
-            this.textBox1.Location = new System.Drawing.Point(306, 503);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 10;
+            this.txt_identityCard.Location = new System.Drawing.Point(306, 503);
+            this.txt_identityCard.Name = "txt_identityCard";
+            this.txt_identityCard.Size = new System.Drawing.Size(100, 20);
+            this.txt_identityCard.TabIndex = 10;
             // 
-            // textBox2
+            // txt_name
             // 
-            this.textBox2.Location = new System.Drawing.Point(25, 503);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 11;
+            this.txt_name.Location = new System.Drawing.Point(25, 503);
+            this.txt_name.Name = "txt_name";
+            this.txt_name.Size = new System.Drawing.Size(100, 20);
+            this.txt_name.TabIndex = 11;
             // 
-            // textBox3
+            // txt_lastName
             // 
-            this.textBox3.Location = new System.Drawing.Point(154, 503);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 12;
+            this.txt_lastName.Location = new System.Drawing.Point(154, 503);
+            this.txt_lastName.Name = "txt_lastName";
+            this.txt_lastName.Size = new System.Drawing.Size(100, 20);
+            this.txt_lastName.TabIndex = 12;
             // 
-            // textBox4
+            // txt_phoneNumber
             // 
-            this.textBox4.Location = new System.Drawing.Point(449, 503);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 13;
+            this.txt_phoneNumber.Location = new System.Drawing.Point(449, 503);
+            this.txt_phoneNumber.Name = "txt_phoneNumber";
+            this.txt_phoneNumber.Size = new System.Drawing.Size(100, 20);
+            this.txt_phoneNumber.TabIndex = 13;
             // 
-            // textBox5
+            // txt_user
             // 
-            this.textBox5.Location = new System.Drawing.Point(591, 503);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 14;
+            this.txt_user.Location = new System.Drawing.Point(591, 503);
+            this.txt_user.Name = "txt_user";
+            this.txt_user.Size = new System.Drawing.Size(100, 20);
+            this.txt_user.TabIndex = 14;
             // 
-            // textBox6
+            // txt_password
             // 
-            this.textBox6.Location = new System.Drawing.Point(727, 503);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 15;
+            this.txt_password.Location = new System.Drawing.Point(727, 503);
+            this.txt_password.Name = "txt_password";
+            this.txt_password.Size = new System.Drawing.Size(100, 20);
+            this.txt_password.TabIndex = 15;
             // 
             // btn_close
             // 
@@ -192,18 +195,47 @@
             this.btn_close.UseVisualStyleBackColor = true;
             this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
+            // txt_userId
+            // 
+            this.txt_userId.Location = new System.Drawing.Point(532, 644);
+            this.txt_userId.Name = "txt_userId";
+            this.txt_userId.Size = new System.Drawing.Size(50, 20);
+            this.txt_userId.TabIndex = 17;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(529, 609);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(21, 13);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "ID:";
+            // 
+            // btn_showUsers
+            // 
+            this.btn_showUsers.Location = new System.Drawing.Point(368, 404);
+            this.btn_showUsers.Name = "btn_showUsers";
+            this.btn_showUsers.Size = new System.Drawing.Size(75, 23);
+            this.btn_showUsers.TabIndex = 19;
+            this.btn_showUsers.Text = "Show Users";
+            this.btn_showUsers.UseVisualStyleBackColor = true;
+            this.btn_showUsers.Click += new System.EventHandler(this.btn_showUsers_Click);
+            // 
             // FormUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(839, 686);
+            this.Controls.Add(this.btn_showUsers);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txt_userId);
             this.Controls.Add(this.btn_close);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_password);
+            this.Controls.Add(this.txt_user);
+            this.Controls.Add(this.txt_phoneNumber);
+            this.Controls.Add(this.txt_lastName);
+            this.Controls.Add(this.txt_name);
+            this.Controls.Add(this.txt_identityCard);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -234,12 +266,15 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txt_identityCard;
+        private System.Windows.Forms.TextBox txt_name;
+        private System.Windows.Forms.TextBox txt_lastName;
+        private System.Windows.Forms.TextBox txt_phoneNumber;
+        private System.Windows.Forms.TextBox txt_user;
+        private System.Windows.Forms.TextBox txt_password;
         private System.Windows.Forms.Button btn_close;
+        private System.Windows.Forms.TextBox txt_userId;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btn_showUsers;
     }
 }

@@ -27,15 +27,23 @@ namespace Presentacion
 
         private void btn_newuser_Click(object sender, EventArgs e)
         {
+            cn.AddUser(txt_name.Text, txt_lastName.Text, txt_identityCard.Text, txt_phoneNumber.Text, txt_user.Text, txt_password.Text);
             dataGridView1.DataSource = cn.QueryDT();
         }
 
         private void btn_updateuser_Click(object sender, EventArgs e)
         {
+            cn.UpdateUser(txt_userId.Text, txt_name.Text, txt_lastName.Text, txt_identityCard.Text, txt_phoneNumber.Text, txt_user.Text, txt_password.Text);
             dataGridView1.DataSource = cn.QueryDT();
         }
 
         private void btn_deleteuser_Click(object sender, EventArgs e)
+        {
+            cn.DeleteUser(txt_userId.Text);
+            dataGridView1.DataSource = cn.QueryDT();
+        }   
+
+        private void btn_showUsers_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = cn.QueryDT();
         }

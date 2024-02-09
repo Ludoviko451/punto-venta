@@ -36,11 +36,53 @@ namespace Datos
             return count;
         }
 
-        //public int AddUser(string name, string lastName, int id, int phoneNumber, string user, string password)
-        //{
+        public int AddUser(string name, string lastName, string id, string phoneNumber, string user, string password)
+        {
 
-        //    return 1;
-        //}
+            int flag = 0;
+            connection.Open();
+            string query = $"insert into person (name, last_name, identity_card, user, password, phone_number) values ('{name}', '{lastName}', '{id}', '{user}', '{password}',  '{phoneNumber}')";
+
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+
+            flag = cmd.ExecuteNonQuery();
+            connection.Close();
+
+            return flag;
+        }
+
+
+        public int UpdateUser(string id, string name, string lastName, string identification, string phoneNumber, string user, string password)
+        {
+
+            int flag = 0;
+            connection.Open();
+            string query = $"Update person set name = '{name}', last_name = '{lastName}', identity_card = '{identification}', user = '{user}', password = '{password}', phone_number = '{phoneNumber}' WHERE id = '{id}'" ;
+
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+
+            flag = cmd.ExecuteNonQuery();
+            connection.Close();
+
+            return flag;
+        }
+
+        public int DeleteUser(string id) {
+
+            int flag = 0;
+            connection.Open();
+
+            string query = $"Delete from person where id = '{id}'";
+
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+
+            flag = cmd.ExecuteNonQuery();
+
+            connection.Close();
+
+            return flag;
+        }
+
 
         public DataTable usersQuery()
         {
