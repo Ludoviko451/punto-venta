@@ -34,5 +34,14 @@ namespace Presentacion
             v1.ShowDialog();
             this.Show();
         }
+
+        private void inventoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Inventory v1 = new Inventory();
+            this.Hide();
+            v1.ShowDialog();
+            this.Show();
+        }
+    
     }
 }

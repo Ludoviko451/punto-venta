@@ -57,7 +57,7 @@ namespace Datos
 
             int flag = 0;
             connection.Open();
-            string query = $"Update person set name = '{name}', last_name = '{lastName}', identity_card = '{identification}', user = '{user}', password = '{password}', phone_number = '{phoneNumber}' WHERE id = '{id}'" ;
+            string query = $"Update person set name = '{name}', last_name = '{lastName}', identity_card = '{identification}', user = '{user}', password = '{password}', phone_number = '{phoneNumber}' WHERE id = '{id}'";
 
             MySqlCommand cmd = new MySqlCommand(query, connection);
 
@@ -87,6 +87,21 @@ namespace Datos
         public DataTable usersQuery()
         {
             string query = "select * from person";
+
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+
+            MySqlDataAdapter data = new MySqlDataAdapter(cmd);
+
+            DataTable tabla = new DataTable();
+
+            data.Fill(tabla);
+
+            return tabla;
+        }
+
+        public DataTable productsQuery()
+        {
+            string query = "select * from inventory";
 
             MySqlCommand cmd = new MySqlCommand(query, connection);
 
