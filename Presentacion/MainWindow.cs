@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
-    public partial class VentanaPrincipal : Form
-    {
-        public VentanaPrincipal()
+    public partial class MainWindow : Form
+    {   
+       
+        public MainWindow()
         {
             InitializeComponent();
+            
+
+            txt_discount.Text = menutxt_discount.Text;
+
+            txt_salesTax.Text = menutxt_salesTax.Text;
         }
 
         private void btn_close_Click(object sender, EventArgs e)
@@ -42,6 +48,12 @@ namespace Presentacion
             v1.ShowDialog();
             this.Show();
         }
-    
+
+        private void taxAndDiscountChanged(object sender, EventArgs e)
+        {
+            txt_discount.Text = menutxt_discount.Text;
+
+            txt_salesTax.Text = menutxt_salesTax.Text;
+        }
     }
 }

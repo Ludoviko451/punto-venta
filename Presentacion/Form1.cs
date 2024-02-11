@@ -30,7 +30,7 @@ namespace Presentacion
 
                 this.Hide();
 
-                VentanaPrincipal v1 = new VentanaPrincipal();
+                MainWindow v1 = new MainWindow();
 
                 v1.Show();
             }

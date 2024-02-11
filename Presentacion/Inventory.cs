@@ -23,5 +23,10 @@ namespace Presentacion
         {
             dataGridView1.DataSource = cn.ShowProducts();
         }
+
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

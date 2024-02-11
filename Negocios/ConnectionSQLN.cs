@@ -24,6 +24,11 @@ namespace Negocios
             return cn.usersQuery();
         }
 
+        public DataTable ShowProducts()
+        {
+            return cn.productsQuery();
+        }
+
         public int AddUser(string name, string lastName, string id, string phoneNumber, string user, string password)
         {
 

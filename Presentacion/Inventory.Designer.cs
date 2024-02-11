@@ -44,6 +44,7 @@
             this.txt_productId = new System.Windows.Forms.TextBox();
             this.lbl_id = new System.Windows.Forms.Label();
             this.btn_showProducts = new System.Windows.Forms.Button();
+            this.btn_close = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -183,11 +184,22 @@
             this.btn_showProducts.UseVisualStyleBackColor = true;
             this.btn_showProducts.Click += new System.EventHandler(this.btn_showProducts_Click);
             // 
+            // btn_close
+            // 
+            this.btn_close.Location = new System.Drawing.Point(777, 326);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(151, 65);
+            this.btn_close.TabIndex = 16;
+            this.btn_close.Text = "CLOSE";
+            this.btn_close.UseVisualStyleBackColor = true;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
+            // 
             // Inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(973, 625);
+            this.Controls.Add(this.btn_close);
             this.Controls.Add(this.btn_showProducts);
             this.Controls.Add(this.txt_productId);
             this.Controls.Add(this.lbl_id);
@@ -231,5 +243,6 @@
         private System.Windows.Forms.TextBox txt_productId;
         private System.Windows.Forms.Label lbl_id;
         private System.Windows.Forms.Button btn_showProducts;
+        private System.Windows.Forms.Button btn_close;
     }
 }

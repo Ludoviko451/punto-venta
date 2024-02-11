@@ -48,7 +48,6 @@ C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Presentacion\obj\D
 C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Presentacion\obj\Debug\Presentacion.Login.resources
 C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Presentacion\obj\Debug\Presentacion.FormUsers.resources
 C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Presentacion\obj\Debug\Presentacion.Properties.Resources.resources
-C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Presentacion\obj\Debug\Presentacion.VentanaPrincipal.resources
 C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Presentacion\obj\Debug\Presentacion.csproj.GenerateResource.cache
 C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Presentacion\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
 C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Presentacion\obj\Debug\Presentacion.exe
@@ -92,3 +91,4 @@ C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Presentacion\bin\D
 C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Presentacion\bin\Debug\Negocios.pdb
 C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Presentacion\bin\Debug\Negocios.dll.config
 C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Presentacion\obj\Debug\Presentacion.Inventory.resources
+C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Presentacion\obj\Debug\Presentacion.MainWindow.resources
