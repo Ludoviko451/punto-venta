@@ -113,5 +113,62 @@ namespace Datos
 
             return tabla;
         }
+
+        public string billQuery()
+        {
+            connection.Open();
+
+            string query = "SELECT MAX(bill_code) + 1 AS next_bill_code FROM billing";
+
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+
+
+            object nextBillCode = cmd.ExecuteScalar();
+
+
+            if (nextBillCode != DBNull.Value)
+            {
+                connection.Close();
+                return nextBillCode.ToString();
+                
+            }
+            else
+            {
+                connection.Close();
+                return "1";
+                
+            }
+           
+
+        }
+
+
+        public Tuple<string, string> inventoryQuery(string code)
+        {
+            connection.Open();
+
+            string query = $"SELECT * from inventory where Code = '{code}'";
+
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+
+            MySqlDataReader reg = cmd.ExecuteReader();
+
+            if (reg.Read())
+            {   
+                var result = Tuple.Create(reg["product_name"].ToString(), reg["price"].ToString());
+                connection.Close();
+                return result;
+               
+            }
+
+            else
+            {
+                connection.Close();
+                return Tuple.Create("Null", "");
+                
+            }
+           
+        }
+
     }
 }

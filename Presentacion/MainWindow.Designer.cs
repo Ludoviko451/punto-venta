@@ -40,13 +40,13 @@
             this.usersMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.inventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtg_billing = new System.Windows.Forms.DataGridView();
             this.lbl_clientCode = new System.Windows.Forms.Label();
             this.txt_clientCode = new System.Windows.Forms.TextBox();
             this.btn_searchClient = new System.Windows.Forms.Button();
             this.lbl_billNumber = new System.Windows.Forms.Label();
             this.lbl_client = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_billNumber = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.lbl_total = new System.Windows.Forms.Label();
             this.lbl_subTotal = new System.Windows.Forms.Label();
@@ -64,7 +64,7 @@
             this.btn_bill = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtg_billing)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_close
@@ -113,7 +113,7 @@
             this.menu_salesTax,
             this.menu_discount});
             this.taxesandDiscount.Name = "taxesandDiscount";
-            this.taxesandDiscount.Size = new System.Drawing.Size(180, 22);
+            this.taxesandDiscount.Size = new System.Drawing.Size(177, 22);
             this.taxesandDiscount.Text = "Taxes And Discount";
             // 
             // menu_salesTax
@@ -121,7 +121,7 @@
             this.menu_salesTax.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menutxt_salesTax});
             this.menu_salesTax.Name = "menu_salesTax";
-            this.menu_salesTax.Size = new System.Drawing.Size(180, 22);
+            this.menu_salesTax.Size = new System.Drawing.Size(121, 22);
             this.menu_salesTax.Text = "Sales Tax";
             // 
             // menutxt_salesTax
@@ -137,7 +137,7 @@
             this.menu_discount.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menutxt_discount});
             this.menu_discount.Name = "menu_discount";
-            this.menu_discount.Size = new System.Drawing.Size(180, 22);
+            this.menu_discount.Size = new System.Drawing.Size(121, 22);
             this.menu_discount.Text = "Discount";
             // 
             // menutxt_discount
@@ -172,13 +172,13 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // dataGridView1
+            // dtg_billing
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(316, 56);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(467, 214);
-            this.dataGridView1.TabIndex = 4;
+            this.dtg_billing.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtg_billing.Location = new System.Drawing.Point(316, 56);
+            this.dtg_billing.Name = "dtg_billing";
+            this.dtg_billing.Size = new System.Drawing.Size(467, 214);
+            this.dtg_billing.TabIndex = 4;
             // 
             // lbl_clientCode
             // 
@@ -223,13 +223,13 @@
             this.lbl_client.TabIndex = 9;
             this.lbl_client.Text = "Client:";
             // 
-            // textBox1
+            // txt_billNumber
             // 
-            this.textBox1.Location = new System.Drawing.Point(381, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(69, 20);
-            this.textBox1.TabIndex = 10;
+            this.txt_billNumber.Location = new System.Drawing.Point(381, 30);
+            this.txt_billNumber.Name = "txt_billNumber";
+            this.txt_billNumber.ReadOnly = true;
+            this.txt_billNumber.Size = new System.Drawing.Size(69, 20);
+            this.txt_billNumber.TabIndex = 10;
             // 
             // textBox2
             // 
@@ -353,6 +353,7 @@
             this.btn_addProduct.TabIndex = 24;
             this.btn_addProduct.Text = "Add Product";
             this.btn_addProduct.UseVisualStyleBackColor = true;
+            this.btn_addProduct.Click += new System.EventHandler(this.btn_addProduct_Click);
             // 
             // btn_bill
             // 
@@ -383,13 +384,13 @@
             this.Controls.Add(this.lbl_subTotal);
             this.Controls.Add(this.lbl_total);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_billNumber);
             this.Controls.Add(this.lbl_client);
             this.Controls.Add(this.lbl_billNumber);
             this.Controls.Add(this.btn_searchClient);
             this.Controls.Add(this.txt_clientCode);
             this.Controls.Add(this.lbl_clientCode);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtg_billing);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btn_close);
@@ -400,7 +401,7 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtg_billing)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -416,13 +417,13 @@
         private System.Windows.Forms.ToolStripMenuItem usersMenu;
         private System.Windows.Forms.ToolStripMenuItem inventoryToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtg_billing;
         private System.Windows.Forms.Label lbl_clientCode;
         private System.Windows.Forms.TextBox txt_clientCode;
         private System.Windows.Forms.Button btn_searchClient;
         private System.Windows.Forms.Label lbl_billNumber;
         private System.Windows.Forms.Label lbl_client;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_billNumber;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label lbl_total;
         private System.Windows.Forms.Label lbl_subTotal;

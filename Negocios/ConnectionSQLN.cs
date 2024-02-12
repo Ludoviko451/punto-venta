@@ -47,5 +47,15 @@ namespace Negocios
 
             return cn.DeleteUser(id);
         }
+
+        public string queryBill()
+        {
+            return cn.billQuery();
+        }
+
+        public Tuple<string, string> inventoryQuery(string code)
+        {
+            return cn.inventoryQuery(code);
+        }
     }
 }
