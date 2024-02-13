@@ -47,5 +47,75 @@ namespace Presentacion
         {
             dataGridView1.DataSource = cn.QueryDT();
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_userId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_password_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_user_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_phoneNumber_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_lastName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_name_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_identityCard_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

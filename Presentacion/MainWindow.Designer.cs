@@ -39,7 +39,6 @@
             this.menutxt_discount = new System.Windows.Forms.ToolStripTextBox();
             this.usersMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.inventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dtg_billing = new System.Windows.Forms.DataGridView();
             this.lbl_clientCode = new System.Windows.Forms.Label();
             this.txt_clientCode = new System.Windows.Forms.TextBox();
@@ -47,7 +46,7 @@
             this.lbl_billNumber = new System.Windows.Forms.Label();
             this.lbl_client = new System.Windows.Forms.Label();
             this.txt_billNumber = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_customerName = new System.Windows.Forms.TextBox();
             this.lbl_total = new System.Windows.Forms.Label();
             this.lbl_subTotal = new System.Windows.Forms.Label();
             this.lbl_subTotalprice = new System.Windows.Forms.Label();
@@ -62,9 +61,11 @@
             this.lbl_productQuantity = new System.Windows.Forms.Label();
             this.btn_addProduct = new System.Windows.Forms.Button();
             this.btn_bill = new System.Windows.Forms.Button();
+            this.customersMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_billing)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_close
@@ -91,7 +92,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
             this.usersMenu,
-            this.inventoryToolStripMenuItem});
+            this.inventoryToolStripMenuItem,
+            this.customersMenu});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(851, 24);
@@ -145,7 +147,7 @@
             this.menutxt_discount.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.menutxt_discount.Name = "menutxt_discount";
             this.menutxt_discount.Size = new System.Drawing.Size(100, 23);
-            this.menutxt_discount.Text = "34";
+            this.menutxt_discount.Text = "0";
             this.menutxt_discount.TextChanged += new System.EventHandler(this.taxAndDiscountChanged);
             // 
             // usersMenu
@@ -161,16 +163,6 @@
             this.inventoryToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.inventoryToolStripMenuItem.Text = "Inventory";
             this.inventoryToolStripMenuItem.Click += new System.EventHandler(this.inventoryToolStripMenuItem_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Presentacion.Properties.Resources.cash_register;
-            this.pictureBox1.Location = new System.Drawing.Point(84, 56);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(125, 122);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // dtg_billing
             // 
@@ -204,6 +196,7 @@
             this.btn_searchClient.TabIndex = 7;
             this.btn_searchClient.Text = "Search";
             this.btn_searchClient.UseVisualStyleBackColor = true;
+            this.btn_searchClient.Click += new System.EventHandler(this.btn_searchClient_Click);
             // 
             // lbl_billNumber
             // 
@@ -231,13 +224,13 @@
             this.txt_billNumber.Size = new System.Drawing.Size(69, 20);
             this.txt_billNumber.TabIndex = 10;
             // 
-            // textBox2
+            // txt_customerName
             // 
-            this.textBox2.Location = new System.Drawing.Point(558, 30);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(224, 20);
-            this.textBox2.TabIndex = 11;
+            this.txt_customerName.Location = new System.Drawing.Point(558, 30);
+            this.txt_customerName.Name = "txt_customerName";
+            this.txt_customerName.ReadOnly = true;
+            this.txt_customerName.Size = new System.Drawing.Size(224, 20);
+            this.txt_customerName.TabIndex = 11;
             // 
             // lbl_total
             // 
@@ -363,6 +356,24 @@
             this.btn_bill.TabIndex = 25;
             this.btn_bill.Text = "Bill";
             this.btn_bill.UseVisualStyleBackColor = true;
+            this.btn_bill.Click += new System.EventHandler(this.btn_bill_Click);
+            // 
+            // customersMenu
+            // 
+            this.customersMenu.Name = "customersMenu";
+            this.customersMenu.Size = new System.Drawing.Size(76, 20);
+            this.customersMenu.Text = "Customers";
+            this.customersMenu.Click += new System.EventHandler(this.customersMenu_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Presentacion.Properties.Resources.cash_register;
+            this.pictureBox1.Location = new System.Drawing.Point(84, 56);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(125, 122);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // MainWindow
             // 
@@ -383,7 +394,7 @@
             this.Controls.Add(this.lbl_subTotalprice);
             this.Controls.Add(this.lbl_subTotal);
             this.Controls.Add(this.lbl_total);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txt_customerName);
             this.Controls.Add(this.txt_billNumber);
             this.Controls.Add(this.lbl_client);
             this.Controls.Add(this.lbl_billNumber);
@@ -400,8 +411,8 @@
             this.Text = "Point of sale";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_billing)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -424,7 +435,7 @@
         private System.Windows.Forms.Label lbl_billNumber;
         private System.Windows.Forms.Label lbl_client;
         private System.Windows.Forms.TextBox txt_billNumber;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_customerName;
         private System.Windows.Forms.Label lbl_total;
         private System.Windows.Forms.Label lbl_subTotal;
         private System.Windows.Forms.Label lbl_subTotalprice;
@@ -443,5 +454,6 @@
         private System.Windows.Forms.ToolStripMenuItem menu_discount;
         private System.Windows.Forms.ToolStripTextBox menutxt_salesTax;
         private System.Windows.Forms.ToolStripTextBox menutxt_discount;
+        private System.Windows.Forms.ToolStripMenuItem customersMenu;
     }
 }

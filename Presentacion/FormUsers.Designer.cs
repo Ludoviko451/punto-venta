@@ -58,6 +58,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(738, 332);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btn_newuser
             // 
@@ -106,6 +107,7 @@
             this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Last Name:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -115,6 +117,7 @@
             this.label3.Size = new System.Drawing.Size(69, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "Identity Card:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -124,6 +127,7 @@
             this.label4.Size = new System.Drawing.Size(81, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "Phone Number:";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -133,6 +137,7 @@
             this.label5.Size = new System.Drawing.Size(32, 13);
             this.label5.TabIndex = 8;
             this.label5.Text = "User:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -142,6 +147,7 @@
             this.label6.Size = new System.Drawing.Size(56, 13);
             this.label6.TabIndex = 9;
             this.label6.Text = "Password:";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // txt_identityCard
             // 
@@ -149,6 +155,7 @@
             this.txt_identityCard.Name = "txt_identityCard";
             this.txt_identityCard.Size = new System.Drawing.Size(100, 20);
             this.txt_identityCard.TabIndex = 10;
+            this.txt_identityCard.TextChanged += new System.EventHandler(this.txt_identityCard_TextChanged);
             // 
             // txt_name
             // 
@@ -156,6 +163,7 @@
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(100, 20);
             this.txt_name.TabIndex = 11;
+            this.txt_name.TextChanged += new System.EventHandler(this.txt_name_TextChanged);
             // 
             // txt_lastName
             // 
@@ -163,6 +171,7 @@
             this.txt_lastName.Name = "txt_lastName";
             this.txt_lastName.Size = new System.Drawing.Size(100, 20);
             this.txt_lastName.TabIndex = 12;
+            this.txt_lastName.TextChanged += new System.EventHandler(this.txt_lastName_TextChanged);
             // 
             // txt_phoneNumber
             // 
@@ -170,6 +179,7 @@
             this.txt_phoneNumber.Name = "txt_phoneNumber";
             this.txt_phoneNumber.Size = new System.Drawing.Size(100, 20);
             this.txt_phoneNumber.TabIndex = 13;
+            this.txt_phoneNumber.TextChanged += new System.EventHandler(this.txt_phoneNumber_TextChanged);
             // 
             // txt_user
             // 
@@ -177,6 +187,7 @@
             this.txt_user.Name = "txt_user";
             this.txt_user.Size = new System.Drawing.Size(100, 20);
             this.txt_user.TabIndex = 14;
+            this.txt_user.TextChanged += new System.EventHandler(this.txt_user_TextChanged);
             // 
             // txt_password
             // 
@@ -184,6 +195,7 @@
             this.txt_password.Name = "txt_password";
             this.txt_password.Size = new System.Drawing.Size(100, 20);
             this.txt_password.TabIndex = 15;
+            this.txt_password.TextChanged += new System.EventHandler(this.txt_password_TextChanged);
             // 
             // btn_close
             // 
@@ -201,6 +213,7 @@
             this.txt_userId.Name = "txt_userId";
             this.txt_userId.Size = new System.Drawing.Size(50, 20);
             this.txt_userId.TabIndex = 17;
+            this.txt_userId.TextChanged += new System.EventHandler(this.txt_userId_TextChanged);
             // 
             // label7
             // 
@@ -210,6 +223,7 @@
             this.label7.Size = new System.Drawing.Size(21, 13);
             this.label7.TabIndex = 18;
             this.label7.Text = "ID:";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // btn_showUsers
             // 

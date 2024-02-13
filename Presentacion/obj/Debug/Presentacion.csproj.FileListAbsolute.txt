@@ -92,3 +92,4 @@ C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Presentacion\bin\D
 C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Presentacion\bin\Debug\Negocios.dll.config
 C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Presentacion\obj\Debug\Presentacion.Inventory.resources
 C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Presentacion\obj\Debug\Presentacion.MainWindow.resources
+C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Presentacion\obj\Debug\Presentacion.FormCustomers.resources

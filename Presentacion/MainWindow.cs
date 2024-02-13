@@ -16,12 +16,13 @@ namespace Presentacion
         private DataTable dt;
         private double subtotal = 0;
         private double total = 0;
+        private double discount = 0;
 
         ConnectionSQLN cn = new ConnectionSQLN();
         public MainWindow()
         {
             InitializeComponent();
-            
+
 
             txt_discount.Text = menutxt_discount.Text;
 
@@ -87,14 +88,57 @@ namespace Presentacion
             row["Discount"] = txt_discount.Text;
             row["Total Price"] = Int32.Parse(txt_productQuantity.Text) * precio;
 
+            subtotal = subtotal + (Int32.Parse(txt_productQuantity.Text) * precio);
             dt.Rows.Add(row);
 
-            subtotal = subtotal + (Int32.Parse(txt_productQuantity.Text) * precio);
-            total = subtotal + (subtotal * (double.Parse(txt_salesTax.Text) / 100));
+
+            discount = double.Parse(menutxt_discount.Text);
+            if (discount == 0)
+            {
+                total = subtotal + (subtotal * (double.Parse(txt_salesTax.Text) / 100));
+            } else
+            {
+                total = subtotal + (subtotal * (double.Parse(txt_salesTax.Text) / 100));
+                total = total - (total * (discount / 100));
+            }
+
+
             lbl_subTotal.Text = subtotal.ToString("0.00"); // Formatear subtotal a dos decimales
 
             lbl_total.Text = total.ToString("0.00"); // Formatear total a dos decimales
         }
 
+        private void btn_searchClient_Click(object sender, EventArgs e) {
+
+            var result = cn.customerQuery(txt_clientCode.Text);
+
+            txt_customerName.Text = result.Item1;
+
+            menutxt_discount.Text = result.Item2.ToString();
+    
+        }
+
+        private void customersMenu_Click(object sender, EventArgs e)
+        {
+            FormCustomers v1 = new FormCustomers();
+            this.Hide();
+            v1.ShowDialog();
+            this.Show();
+        }
+
+        private void btn_bill_Click(object sender, EventArgs e)
+        {
+            foreach (DataRow row in dt.Rows)
+            {
+
+                MessageBox.Show(row["Code"].ToString());
+                //    row["Code"]
+                //row["Product"] = 
+                //row["Quantity"] = 
+                //row["Price By Unit"] =
+                //row["Discount"] = 
+                //row["Total Price"] = 
+            }
+        }
     }
 }

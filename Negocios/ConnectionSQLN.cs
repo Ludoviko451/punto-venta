@@ -24,6 +24,11 @@ namespace Negocios
             return cn.usersQuery();
         }
 
+        public DataTable ShowCustomers()
+        {
+            return cn.customersQuery();
+        }
+
         public DataTable ShowProducts()
         {
             return cn.productsQuery();
@@ -48,6 +53,23 @@ namespace Negocios
             return cn.DeleteUser(id);
         }
 
+        public int AddCustomer(string name, string lastName, string email, string phoneNumber)
+        {
+
+
+            return cn.AddCustomer(name, lastName, email, phoneNumber);
+        }
+
+        public int UpdateCustomer(string code, string name, string lastName, string email, string phoneNumber) { 
+
+            return cn.UpdateCustomer(code, name, lastName, email, phoneNumber);
+        }
+
+        public int DeleteCustomer(string code)
+        {
+
+            return cn.DeleteCustomer(code);
+        }
         public string queryBill()
         {
             return cn.billQuery();
@@ -56,6 +78,11 @@ namespace Negocios
         public Tuple<string, string> inventoryQuery(string code)
         {
             return cn.inventoryQuery(code);
+        }
+
+        public Tuple<string, double> customerQuery(string code)
+        {
+            return cn.customerQuery(code);
         }
     }
 }
