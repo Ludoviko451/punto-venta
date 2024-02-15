@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Negocios;
+using Entidades;
 namespace Presentacion
 {
     public partial class MainWindow : Form
@@ -17,6 +18,7 @@ namespace Presentacion
         private double subtotal = 0;
         private double total = 0;
         private double discount = 0;
+        private string customer = "";
 
         ConnectionSQLN cn = new ConnectionSQLN();
         public MainWindow()
@@ -114,6 +116,8 @@ namespace Presentacion
 
             txt_customerName.Text = result.Item1;
 
+            customer = result.Item1;
+
             menutxt_discount.Text = result.Item2.ToString();
     
         }
@@ -128,17 +132,29 @@ namespace Presentacion
 
         private void btn_bill_Click(object sender, EventArgs e)
         {
+          
+            List < Bill > billList = new List<Bill>();
             foreach (DataRow row in dt.Rows)
             {
+                Bill bill = new Bill();
 
-                MessageBox.Show(row["Code"].ToString());
-                //    row["Code"]
-                //row["Product"] = 
-                //row["Quantity"] = 
-                //row["Price By Unit"] =
-                //row["Discount"] = 
-                //row["Total Price"] = 
+                bill.Code = row["Code"].ToString();
+                bill.Product = row["Product"].ToString();
+                bill.Pricexunit = row["Price By Unit"].ToString();
+                bill.Quantity = row["Quantity"].ToString();
+                bill.Discount = row["Discount"].ToString();
+                bill.SubTotal = subtotal.ToString();
+                bill.TotalPrice = row["Total Price"].ToString();
+                bill.Customer = customer;
+                bill.Subtotal = subtotal.ToString("0.00");
+                bill.BillCode = txt_billNumber.Text;
+
+                bill.Total = total.ToString("0.00");
+                billList.Add(bill);
+
             }
+
+            cn.InsertBill(billList);
         }
     }
 }

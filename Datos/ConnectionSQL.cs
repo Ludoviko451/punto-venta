@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using Org.BouncyCastle.Asn1.Ocsp;
+using Entidades;
+using System.Data.SqlClient;
 namespace Datos
 {
     public class ConnectionSQL
@@ -271,5 +273,31 @@ namespace Datos
 
         }
 
+
+        public void InsertBill(List<Bill> F)
+        {
+            connection.Open();
+
+            foreach(Bill bill in F)
+            {
+
+                string query = @"INSERT INTO billing (bill_code, product, price_byUnit, quantity, total_price, customer, customerDiscount, total_amount) 
+                             VALUES (@bill_code, @product, @price_byUnit, @quantity, @total_price, @customer, @customerDiscount, @total_amount)";
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+
+                cmd.Parameters.AddWithValue("@bill_code", bill.BillCode);
+                cmd.Parameters.AddWithValue("@product", bill.Product);
+                cmd.Parameters.AddWithValue("@price_byUnit", bill.Pricexunit);
+                cmd.Parameters.AddWithValue("@quantity", bill.Quantity);
+                cmd.Parameters.AddWithValue("@total_price", bill.TotalPrice);
+                cmd.Parameters.AddWithValue("@customer", bill.Customer);
+                cmd.Parameters.AddWithValue("@customerDiscount", bill.Discount);
+                cmd.Parameters.AddWithValue("@total_amount", bill.Total);
+
+                cmd.ExecuteNonQuery();
+            }
+
+            connection.Close();
+        }
     }
 }

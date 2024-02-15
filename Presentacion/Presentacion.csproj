@@ -121,6 +121,10 @@
       <Project>{DA23F50B-CFB2-4EBE-91C1-0BCFADFF6094}</Project>
       <Name>Datos</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{be94a8c6-6da6-4a7c-b8ca-c12aa022446a}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Negocios\Negocios.csproj">
       <Project>{8f2fd91b-da16-4aa4-82f0-95b90c115970}</Project>
       <Name>Negocios</Name>

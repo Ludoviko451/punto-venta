@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Datos;
+using Entidades;
 using MySql.Data.MySqlClient;
 namespace Negocios
 {
@@ -83,6 +84,12 @@ namespace Negocios
         public Tuple<string, double> customerQuery(string code)
         {
             return cn.customerQuery(code);
+        }
+
+
+        public void InsertBill(List<Bill> F)
+        {
+            cn.InsertBill(F);
         }
     }
 }

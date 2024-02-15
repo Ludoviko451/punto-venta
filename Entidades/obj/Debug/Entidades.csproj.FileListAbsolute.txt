@@ -1,0 +1,6 @@
+C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Entidades\bin\Debug\Entidades.dll
+C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Entidades\bin\Debug\Entidades.pdb
+C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Entidades\obj\Debug\Entidades.dll
+C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Entidades\obj\Debug\Entidades.pdb

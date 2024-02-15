@@ -76,3 +76,5 @@ C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Datos\obj\Debug\Da
 C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Datos\obj\Debug\Datos.csproj.CopyComplete
 C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Datos\obj\Debug\Datos.dll
 C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Datos\obj\Debug\Datos.pdb
+C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Datos\bin\Debug\Entidades.dll
+C:\Users\USUARIO\Documents\cidugis\Git Hub\c#\Puntodeventaapp\Datos\bin\Debug\Entidades.pdb
